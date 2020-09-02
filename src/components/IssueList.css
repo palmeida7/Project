@@ -1,0 +1,23 @@
+.issue-div {
+    background: white;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 1000px;
+    max-height: 100%;
+
+}
+
+.input-div{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+
+code {
+    margin: 20px;
+}
+
+ul {
+    list-style-type:none;
+}
