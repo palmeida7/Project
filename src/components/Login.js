@@ -1,12 +1,10 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 //import fire from '../config/Config';
 import "../App.css";
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-import IssueList from "./IssueList";
-import Home from "./Home";
 import { AuthContext } from "../store";
-import { useHistory, Redirect } from "react-router";
+import { Redirect } from "react-router";
 
 if (!firebase.apps.length) {
   firebase.initializeApp({
@@ -29,17 +27,17 @@ const uiConfig = {
   },
 };
 
-const logOut = () => {
-  firebase
-    .auth()
-    .signOut()
-    .then(function () {
-      console.log("Come again!");
-    })
-    .catch(function () {
-      console.log("Error");
-    });
-};
+// const logOut = () => {
+//   firebase
+//     .auth()
+//     .signOut()
+//     .then(function () {
+//       console.log("Come again!");
+//     })
+//     .catch(function () {
+//       console.log("Error");
+//     });
+// };
 
 const Login = () => {
   const { userData } = useContext(AuthContext);
