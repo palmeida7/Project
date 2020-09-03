@@ -1,36 +1,17 @@
-import React, {useState} from 'react';
-import './App.css';
-import IssueList from './components/IssueList';
-import AddIssueForm from './components/AddIssueForm';
+import React, { useState } from "react";
+import "./App.css";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import PrivateRoute from "./components/PrivateRoute";
+import EditIssueForm from "./components/EditIssueForm";
 
-import Home from './components/Home';
-import Login from './components/Login';
-
-
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-
-
-
-//import firebase from './Config';
-
-// firebase.firestore().collection('issues').add({
-//   title: 'Server Down',
-//   priority: 'high',
-//   summary: 'Did you turn it on and off'
-// })
-
-
-function App(){
-  const [user, setUser] = useState(null);
-  return(
+function App() {
+  return (
     <Router>
-      <div className="App">
-        <h1>Project Restart</h1>
-        <Login setUser={setUser} user={user}/>
-      </div>
-      <>
-        {user && <Home />}
-      </>
+      <PrivateRoute exact path="/" component={Home} />
+      <PrivateRoute exact path="/edit/:id" component={EditIssueForm} />
+      <Route exact path="/login" component={Login} />
     </Router>
   );
 }
