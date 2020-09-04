@@ -47,7 +47,8 @@ const Login = () => {
   } else {
     return (
       <>
-        <div>Login or Sign Up</div>
+        <div className="proj-log"><h1>Project Restart</h1></div>
+        <div className="display-log"><h1>Login or Sign Up</h1></div>
         <StyledFirebaseAuth
           uiConfig={uiConfig}
           firebaseAuth={firebase.auth()}

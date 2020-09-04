@@ -1,19 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+
+
 .App {
   text-align: center;
+  color:black;
+}
+.App-home{
+  text-align: center;
+  color:black;
+  background-color:rgb(201, 228, 201);
 }
 
-body{
-  background: whitesmoke;
+html{
+  background: white;
+}
+code {
+  color:purple;
 }
 
 input {
   height: 25px;
 }
+.display-log {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+}
+.proj-log {
+  text-align: center;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: bold,700;
+  font-style:italic;
+}
 
+.form-container{
+  justify-content: center;
+}
 
+.hook-con .email-con{
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.issue-entry{
+  height: 60px;
+
+}
+.edit-form{
+  justify-content: center;
+  text-align:center;
+  left:50%;
+  top:50%;
+  width: 1000px;
+  position: absolute;
+  transform:translate(-50%,-50%);
+  background: rgba(128, 128, 128, 0.384);
+  height: 400px;
+  color:black;
+}
+.row{
+  justify-content: center;
+}
+.priority{
+  color:darkslategray;
 }
 
 @media (prefers-reduced-motion: no-preference) {

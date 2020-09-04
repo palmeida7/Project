@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import IssueList from './IssueList';
+//import IssueList from './IssueList';
 import firebase from '../Config';
 import Issue from './Issue';
 
@@ -30,9 +30,9 @@ const Issues = () =>{
     const issues = useIssues()
 
     return (
-        <ul> 
+        <ul class="list-group"> 
         {issues.map((issue, idx)=>
-        <li key={idx}>
+        <li class="list-group-item" key={idx}>
             <Issue issue={issue}/>
         </li>
         )}

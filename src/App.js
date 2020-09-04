@@ -5,6 +5,8 @@ import Login from "./components/Login";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 import EditIssueForm from "./components/EditIssueForm";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (

@@ -9,5 +9,5 @@ export default () => {
     history.push("/login");
   };
 
-  return <button onClick={handleLogout}>Logout</button>;
+  return <button type="button" class="btn btn-primary" onClick={handleLogout}>Logout</button>;
 };

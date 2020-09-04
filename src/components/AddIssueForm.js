@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import firebase from '../Config';
 
+
 const AddIssueForm = () => {
     
     const [title, setTitle] = useState('')
@@ -29,18 +30,15 @@ const AddIssueForm = () => {
         <form onSubmit={onSubmit}>
             <h4>Add New Issue</h4>
             <div>
-                <label>New Title</label>
-                <input type="text" value={title} onChange={e=>setTitle(e.currentTarget.value)} />
+                <input type="text" value={title} onChange={e=>setTitle(e.currentTarget.value)} placeholder="Title"/>
             </div>
             <div>
-                <label>Summary</label>
-                <input type="text" value={summary} onChange={e=>setSummary(e.currentTarget.value)} />
+                <input type="text" value={summary} onChange={e=>setSummary(e.currentTarget.value)} placeholder="Summary" />
             </div>
             <div>
-                <label>Priority --</label>
-                <input type="text" value={priority} onChange={e=>setPriority(e.currentTarget.value)} />
+                <input type="text" value={priority} onChange={e=>setPriority(e.currentTarget.value)} placeholder="Priority"/>
             </div>
-            <button>Add New Issue</button>
+            <button type="button" class="btn btn-secondary">Add New Issue</button>
         </form>
     )
 }

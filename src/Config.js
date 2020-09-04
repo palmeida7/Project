@@ -3,13 +3,14 @@ import "firebase/auth";
 import "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCkB24_fNXwbUZlgo6dY6ZS43WSDivlWlo",
-  authDomain: "tracker-d3957.firebaseapp.com",
-  databaseURL: "https://tracker-d3957.firebaseio.com",
-  projectId: "tracker-d3957",
-  storageBucket: "tracker-d3957.appspot.com",
-  messagingSenderId: "177454063165",
-  appId: "1:177454063165:web:edddc99ce2043b199e5454",
+  apiKey: "AIzaSyCGrejtN0wY643_VyUBMHFFdXcvnUff56s",
+  authDomain: "react-app-b453a.firebaseapp.com",
+  databaseURL: "https://react-app-b453a.firebaseio.com",
+  projectId: "react-app-b453a",
+  storageBucket: "react-app-b453a.appspot.com",
+  messagingSenderId: "508391766850",
+  appId: "1:508391766850:web:c6b988ef9e327f3acd26db",
+  measurementId: "G-RLRFEE6N8P"
 };
 
 const fb = firebase.initializeApp(firebaseConfig);

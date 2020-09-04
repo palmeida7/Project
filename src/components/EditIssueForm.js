@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import firebase, { db } from "../Config";
+//import firebase, { db } from "../Config";
 import fb from "../Config";
+import '../App.css';
 
 export default ({ match, history }) => {
   const {
@@ -39,36 +40,54 @@ export default ({ match, history }) => {
 
     history.push("/");
   }
+  async function onDelete(e) {
+    e.preventDefault();
+
+    await fb.firestore().collection("issues").doc(id).delete(
+    );
+
+    history.push("/");
+  }
 
   if (!loading) {
     return (
-      <form onSubmit={onSubmit}>
+      <form className="edit-form" onSubmit={onSubmit}>
         <h4>Edit Issue</h4>
-        <div>
+        <div class="row">
+        <div class="form-group w-25">
           <label>Title</label>
           <input
+            class="form-control"
             type="text"
             value={title}
             onChange={(e) => setTitle(e.currentTarget.value)}
           />
         </div>
-        <div>
+        </div>
+        <div class="row">
+        <div class="form-group w-25">
           <label>Summary</label>
           <input
+            class="form-control"
             type="text"
             value={summary}
             onChange={(e) => setSummary(e.currentTarget.value)}
           />
         </div>
-        <div>
-          <label>Priority --</label>
+        </div>
+        <div class="row">
+        <div class="form-group w-25">
+          <label>- Priority -</label>
           <input
+            class="form-control"
             type="text"
             value={priority}
             onChange={(e) => setPriority(e.currentTarget.value)}
           />
         </div>
-        <button>Edit Issue</button>
+        </div>
+        <button type="button" class="btn btn-success"onClick={onSubmit}>Edit Issue</button>
+        <button type="button" class="btn btn-warning" onClick={onDelete}>Delete</button>
       </form>
     );
   } else {

@@ -1,10 +1,11 @@
 .issue-div {
-    background: white;
+    background: whitesmoke;
     justify-content: center;
     text-align: center;
     margin: 0 auto;
     width: 1000px;
     max-height: 100%;
+    
 
 }
 
