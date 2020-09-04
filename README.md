@@ -47,7 +47,7 @@ ___
 ___
 
 ## Code Snippets:
-### Main code to add a new entry into our database
+### Main code to add a new entry into the database
 ``` javascript
     function onSubmit(e) {
         e.preventDefault()
@@ -66,4 +66,31 @@ ___
                 setPriority('')
             })
     }
+```
+
+## Code Snippets:
+### Edit and Delete functions for entries in the Firebase database
+``` javascript
+  async function onSubmit(e) {
+    e.preventDefault();
+
+    await fb.firestore().collection("issues").doc(id).set(
+      {
+        title,
+        summary,
+        priority,
+      },
+      { merge: true }
+    );
+
+    history.push("/");
+  }
+  async function onDelete(e) {
+    e.preventDefault();
+
+    await fb.firestore().collection("issues").doc(id).delete(
+    );
+
+    history.push("/");
+  }
 ```
