@@ -22,6 +22,7 @@ and allows for the user to collaborate with others through email directly from t
 - Realtime Database
 - Email.js
 - Bootstrap styling
+- Toastify notifications
 
 ## MVP (Minimum Viable Product):
 - The idea was to create a secure app that allowed the user to track issues
